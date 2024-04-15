@@ -1,0 +1,6 @@
+mysql-data
+t_influencer_posts_202401121334.csv
+**/.pytest_cache
+.bash_history
+__pycache__
+.cache

@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example_password
+      MYSQL_DATABASE: example_db
+      MYSQL_USER: example_user
+      MYSQL_PASSWORD: example_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  app:
+    build: .
+    restart: always
+    container_name: app
+    tty: true
+    volumes:
+      - ./app:/app
+    ports:
+      - "4545:4545"
+    depends_on:
+      - db

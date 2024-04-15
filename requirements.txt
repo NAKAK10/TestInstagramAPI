@@ -1,0 +1,7 @@
+flask>=3
+pandas>=2.2
+mysql-connector-python>=8.3.0
+unidic-lite>=1.0.8
+mecab-python3>=1.0.8
+emoji>=2.11.0
+pytest>=8
